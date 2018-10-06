@@ -1,0 +1,71 @@
+#spring:
+#  profiles:
+#    active: google
+#security:
+#  oauth2:
+#    client:
+#      clientId: 288192095109-uvkhf61dgpvnl1aefb7qf55o7abm9ptr.apps.googleusercontent.com
+#      clientSecret: 7kKl-uZ6wOjb5sYLW7cCaekv
+#      accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+#      userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+#      clientAuthenticationScheme: form
+#      scope:
+#      - openid
+#      - email
+#      - profile
+#    resource:
+#      userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+#      preferTokenInfo: true
+##
+#server:
+#  port: 8082
+
+security:
+  oauth2:
+    client:
+      client-id: acme
+      client-secret: acmesecret
+      scope: read,write
+      auto-approve-scopes: '.*'
+google:
+  client:
+      clientId: 288192095109-uvkhf61dgpvnl1aefb7qf55o7abm9ptr.apps.googleusercontent.com
+      clientSecret:  7kKl-uZ6wOjb5sYLW7cCaekv
+      accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+      userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+      clientAuthenticationScheme: form
+      scope:
+      - openid
+      - email
+      - profile
+  resource:
+      userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+      preferTokenInfo: true
+      
+github:
+  client:
+    clientId: 139c9c8c4a7661c27a5d
+    clientSecret: 6687c1fc396060f915de3c0e7f4c0727395e379b
+    accessTokenUri: https://github.com/login/oauth/access_token
+    userAuthorizationUri: https://github.com/login/oauth/authorize
+    clientAuthenticationScheme: form
+    scope:
+      - openid
+      - email
+      - profile
+  resource:
+    userInfoUri: https://api.github.com/user
+    
+facebook:
+  client:
+    clientId: 233668646673605
+    clientSecret: 33b17e044ee6a4fa383f46ec6e28ea1d
+    accessTokenUri: https://graph.facebook.com/oauth/access_token
+    userAuthorizationUri: https://www.facebook.com/dialog/oauth
+    tokenName: oauth_token
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://graph.facebook.com/me
+server:
+  port: 8080
